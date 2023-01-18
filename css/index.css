@@ -48,7 +48,9 @@ p {
   letter-spacing: 1px;
 }
 body {
+  position: relative;
   min-height: 100vh;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +64,6 @@ body {
 }
 .navbar-container {
   height: 40px;
-  width: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -81,21 +82,31 @@ body {
   border: none;
 }
 /* navbar */
-nav {
-  display: none;
-  flex-direction: column;
+/* .nav-container {
   position: absolute;
   top: 0;
   right: 0;
-  height: 100vh;
   width: 66.66vw;
+  height: 100vh;
+  overflow: hidden;
+} */
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 66.66vw;
+  height: 100vh;
   padding: 118px 0 0 0;
-
   background-color: transparent;
   backdrop-filter: blur(70px);
+
+  transition: all 0.15s linear;
+  transform: translateX(100%);
 }
 .nav-show {
-  display: flex;
+  transform: translateX(0%);
 }
 nav a {
   font-family: var(--font-secondary);
