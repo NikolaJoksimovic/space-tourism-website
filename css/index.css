@@ -10,15 +10,16 @@
 
   --fs-h1-sm: 80px;
   --fs-h1-md: 150px;
-  --fs-h1-lg: 80px;
+  --fs-h1-lg: 150px;
   --fs-h5-sm: 16px;
   --fs-h5-md: 20px;
-  --fs-h5-lg: 16px;
+  --fs-h5-lg: 28px;
   --fs-p-sm: 15px;
   --fs-p-md: 16px;
-  --fs-p-lg: 16px;
+  --fs-p-lg: 18px;
 
   --mw-450: 450px;
+  --mw-1440: 1440px;
 }
 
 * {
@@ -83,9 +84,28 @@ p {
   }
   h5 {
     font-size: var(--fs-h5-md);
+    margin-top: 1rem;
   }
   p {
     font-size: var(--fs-p-md);
+  }
+}
+@media screen and (min-width: 1080px) {
+  body {
+    padding: 40px 0 0 0;
+    background: url("../assets/home/background-home-desktop.jpg") center/cover
+      no-repeat;
+  }
+  h1 {
+    font-size: var(--fs-h1-lg);
+    margin: 3rem 0 3rem 0;
+  }
+  h5 {
+    font-size: var(--fs-h5-lg);
+    margin-top: 3rem;
+  }
+  p {
+    font-size: var(--fs-p-lg);
   }
 }
 .navbar-container {
@@ -180,7 +200,8 @@ nav a:focus {
     font-size: 17px;
     line-height: 16.8px;
     letter-spacing: 2.36px;
-    padding: 16px;
+    padding: 16px 0 16px 0;
+    margin: 0 16px 0 16px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -189,7 +210,6 @@ nav a:focus {
   }
   nav a:focus,
   nav a:active {
-    /* border-inline-bottom: -0.2rem; */
     border-bottom: 0.2rem solid var(--clr-accent);
   }
   nav a span {
@@ -199,10 +219,57 @@ nav a:focus {
     display: none;
   }
 }
+@media screen and (min-width: 1080px) {
+  .navbar-container {
+    position: relative;
+    max-width: var(--mw-1440);
+    height: 96px;
+    padding: 0 0 0 55px;
+  }
+  nav {
+    width: 830px;
+  }
+  nav a {
+    position: relative;
+    font-size: 17px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+    padding: 16px 0 16px 0;
+    margin: 0 16px 0 16px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid transparent;
+  }
+  nav a:focus,
+  nav a:active {
+    border-bottom: 0.2rem solid var(--clr-accent);
+  }
+  nav a span {
+    display: none;
+  }
+  .close-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav::before {
+    content: "";
+    position: absolute;
+    left: -420px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 473px;
+    height: 1px;
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+}
 div:nth-child(2) {
   max-width: var(--mw-450);
 }
 .circle-explore {
+  cursor: pointer;
   background-color: white;
   width: 150px;
   height: 150px;
@@ -211,7 +278,7 @@ div:nth-child(2) {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin: 1rem 0 1rem 0;
 }
 .circle-explore span {
   font-size: 20px;
@@ -227,6 +294,32 @@ div:nth-child(2) {
   .circle-explore {
     width: 224px;
     height: 224px;
-    margin-bottom: 3rem;
+    margin: 3rem 0 3rem 0;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .circle-explore {
+    width: 274px;
+    height: 274px;
+    margin: 3rem 0 3rem 0;
+  }
+  .circle-explore span {
+    font-size: 32px;
+    line-height: 36.67px;
+    letter-spacing: 2 px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  div:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-100% - 100px), calc(-50% + 100px));
+  }
+  .circle-explore {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(calc(150% + 200px), calc(-50% + 130px));
   }
 }
