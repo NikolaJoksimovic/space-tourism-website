@@ -176,11 +176,21 @@ nav a:focus {
     background-color: hsla(0, 0%, 100%, 0.04);
   }
   nav a {
+    position: relative;
     font-size: 17px;
     line-height: 16.8px;
     letter-spacing: 2.36px;
     padding: 16px;
-    height: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.2rem solid transparent;
+  }
+  nav a:focus,
+  nav a:active {
+    /* border-inline-bottom: -0.2rem; */
+    border-bottom: 0.2rem solid var(--clr-accent);
   }
   nav a span {
     display: none;
