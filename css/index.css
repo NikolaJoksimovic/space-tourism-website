@@ -9,8 +9,16 @@
   --padding-page-sm: 24px;
 
   --fs-h1-sm: 80px;
+  --fs-h1-md: 150px;
+  --fs-h1-lg: 80px;
   --fs-h5-sm: 16px;
+  --fs-h5-md: 20px;
+  --fs-h5-lg: 16px;
   --fs-p-sm: 15px;
+  --fs-p-md: 16px;
+  --fs-p-lg: 16px;
+
+  --mw-450: 450px;
 }
 
 * {
@@ -18,6 +26,22 @@
   margin: 0;
   padding: 0;
 }
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--padding-page-sm);
+
+  background: url("../assets/home/background-home-mobile.jpg") center/cover
+    no-repeat;
+}
+
 h1 {
   text-align: center;
   text-transform: uppercase;
@@ -47,20 +71,22 @@ p {
   line-height: 25px;
   letter-spacing: 1px;
 }
-body {
-  position: relative;
-  min-height: 100vh;
-  width: 100vw;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: var(--padding-page-sm);
-
-  background: url("../assets/home/background-home-mobile.jpg") center/cover
-    no-repeat;
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0 0 0 0;
+    background: url("../assets/home/background-home-tablet.jpg") center/cover
+      no-repeat;
+  }
+  h1 {
+    font-size: var(--fs-h1-md);
+    margin: 3rem 0 3rem 0;
+  }
+  h5 {
+    font-size: var(--fs-h5-md);
+  }
+  p {
+    font-size: var(--fs-p-md);
+  }
 }
 .navbar-container {
   height: 40px;
@@ -81,15 +107,6 @@ body {
   color: var(--clr-secondary);
   border: none;
 }
-/* navbar */
-/* .nav-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 66.66vw;
-  height: 100vh;
-  overflow: hidden;
-} */
 nav {
   display: flex;
   flex-direction: column;
@@ -134,6 +151,47 @@ nav a:focus {
   font-weight: 400;
   color: var(--clr-secondary);
 }
+@media screen and (min-width: 768px) {
+  .navbar-container {
+    position: relative;
+    height: 96px;
+    padding: 0 0 0 39px;
+  }
+  .navbar-container svg {
+    height: 48px;
+    width: auto;
+  }
+  .navbar-container .menu-btn {
+    display: none;
+  }
+  nav {
+    position: absolute;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    width: 450px;
+    background-color: hsla(0, 0%, 100%, 0.04);
+  }
+  nav a {
+    font-size: 17px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+    padding: 16px;
+    height: fit-content;
+  }
+  nav a span {
+    display: none;
+  }
+  .close-btn {
+    display: none;
+  }
+}
+div:nth-child(2) {
+  max-width: var(--mw-450);
+}
 .circle-explore {
   background-color: white;
   width: 150px;
@@ -154,4 +212,11 @@ nav a:focus {
   font-weight: 400;
   line-height: 22.92px;
   letter-spacing: 1.25px;
+}
+@media screen and (min-width: 768px) {
+  .circle-explore {
+    width: 224px;
+    height: 224px;
+    margin-bottom: 3rem;
+  }
 }
