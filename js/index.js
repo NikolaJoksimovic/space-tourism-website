@@ -1,4 +1,5 @@
 $(window).ready(() => {
+  $(".preloader").css("display", "none");
   $(".menu-btn").click(() => {
     $("nav").addClass("nav-show");
   });

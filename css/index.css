@@ -27,6 +27,14 @@
   margin: 0;
   padding: 0;
 }
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--clr-primary);
+}
 body {
   position: relative;
   min-height: 100vh;
@@ -108,7 +116,7 @@ p {
     font-size: var(--fs-p-lg);
   }
 }
-div:nth-child(2) {
+div:nth-child(3) {
   max-width: var(--mw-450);
 }
 .circle-explore {
@@ -166,13 +174,13 @@ div:nth-child(2) {
   }
 }
 @media screen and (min-width: 1440px) {
-  div:nth-child(2) {
+  div:nth-child(3) {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(calc(-100% - 100px), calc(-50% + 100px));
   }
-  div:nth-child(2) * {
+  div:nth-child(3) * {
     text-align: left;
   }
   .circle-explore {
