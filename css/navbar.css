@@ -1,26 +1,3 @@
-:root {
-  --clr-primary: hsl(230, 35%, 7%);
-  --clr-secondary: hsl(231, 77%, 90%);
-  --clr-accent: hsl(0, 0%, 100%);
-
-  --font-primary: "Bellefair";
-  --font-secondary: "Barlow Condensed";
-
-  --padding-page-sm: 24px;
-
-  --fs-h1-sm: 80px;
-  --fs-h1-md: 150px;
-  --fs-h1-lg: 150px;
-  --fs-h5-sm: 16px;
-  --fs-h5-md: 20px;
-  --fs-h5-lg: 28px;
-  --fs-p-sm: 15px;
-  --fs-p-md: 16px;
-  --fs-p-lg: 18px;
-
-  --mw-450: 450px;
-  --mw-1440: 1440px;
-}
 .navbar-container {
   height: 40px;
   width: 100%;
@@ -90,6 +67,7 @@
     position: relative;
     height: 96px;
     padding: 0 0 0 39px;
+    margin: 0 auto 0 auto;
   }
   .navbar-container svg {
     height: 48px;
