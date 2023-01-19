@@ -124,7 +124,14 @@ div:nth-child(2) {
   margin: 1rem 0 1rem 0;
   outline: 88px solid transparent;
 }
-
+.circle-explore a {
+  text-decoration: none;
+}
+.circle-explore a:active,
+.circle-explore a:focus,
+.circle-explore a:visited {
+  color: var(--clr-primary);
+}
 .circle-explore:hover {
   outline: 88px solid rgba(255, 255, 255, 0.1);
   transition: all 0.1s linear;
