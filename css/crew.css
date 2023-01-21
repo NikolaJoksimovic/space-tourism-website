@@ -1,0 +1,57 @@
+:root {
+  --clr-primary: hsl(230, 35%, 7%);
+  --clr-secondary: hsl(231, 77%, 90%);
+  --clr-accent: hsl(0, 0%, 100%);
+
+  --font-primary: "Bellefair";
+  --font-secondary: "Barlow Condensed";
+
+  --padding-page-sm: 24px;
+
+  --mw-450: 450px;
+  --mw-1440: 1440px;
+
+  --fs-h3-sm: 1px;
+  --fs-h3-md: 1px;
+  --fs-h3-lg: 1px;
+  --fs-h4-sm: 1px;
+  --fs-h4-md: 1px;
+  --fs-h4-lg: 1px;
+  --fs-h5-sm: 1px;
+  --fs-h5-md: 1px;
+  --fs-h5-lg: 1px;
+  --fs-p-sm: 1px;
+  --fs-p-md: 1px;
+  --fs-p-lg: 1px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("../assets/crew/background-crew-mobile.jpg") center/cover
+    no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  padding: var(--padding-page-sm);
+}
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.preloader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-primary);
+}
+.crew-body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

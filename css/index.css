@@ -21,16 +21,14 @@
   --mw-450: 450px;
   --mw-1440: 1440px;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 .preloader {
+  z-index: 999;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   background: var(--clr-primary);
@@ -132,7 +130,7 @@ div:nth-child(3) {
   margin: 1rem 0 1rem 0;
   outline: 88px solid transparent;
 }
-.circle-explore a {
+.explore-link {
   text-decoration: none;
 }
 .circle-explore a:active,

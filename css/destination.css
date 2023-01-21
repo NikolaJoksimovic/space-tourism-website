@@ -137,6 +137,14 @@ p {
   max-width: 450px;
   margin: auto;
 }
+@media screen and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 h5:first-of-type {
   margin: 24px 0 24px 0;
 }
