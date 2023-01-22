@@ -1,9 +1,9 @@
 $(window).ready(() => {
   $(".menu-btn").click(() => {
-    $("nav").addClass("nav-show");
+    $(".main-nav").addClass("nav-show");
   });
   $(".close-btn").click(() => {
-    $("nav").removeClass("nav-show");
+    $(".main-nav").removeClass("nav-show");
   });
 
   // active link effect

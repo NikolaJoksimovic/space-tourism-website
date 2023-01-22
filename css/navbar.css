@@ -34,6 +34,7 @@
 }
 .nav-show {
   transform: translateX(0%);
+  z-index: 1001;
 }
 .main-nav a {
   position: relative;

@@ -1,0 +1,80 @@
+:root {
+  --clr-primary: hsl(230, 35%, 7%);
+  --clr-secondary: hsl(231, 77%, 90%);
+  --clr-accent: hsl(0, 0%, 100%);
+
+  --font-primary: "Bellefair";
+  --font-secondary: "Barlow Condensed";
+
+  --padding-page-sm: 24px;
+
+  --mw-450: 450px;
+  --mw-1440: 1440px;
+
+  --fs-h3-sm: 24px;
+  --fs-h3-md: 40px;
+  --fs-h3-lg: 56px;
+  --fs-h4-sm: 16px;
+  --fs-h4-md: 20px;
+  --fs-h4-lg: 28px;
+  --fs-h5-sm: 16px;
+  --fs-h5-md: 25px;
+  --fs-h5-lg: 32px;
+  --fs-p-sm: 15px;
+  --fs-p-md: 16px;
+  --fs-p-lg: 18px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-family: "Bellefair";
+  font-size: var(--fs-h3-sm);
+  font-weight: 400;
+  line-height: 27.5px;
+  letter-spacing: 2.7px;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+}
+h4 {
+  font-family: "Barlow Condensed";
+  font-size: var(--fs-h4-sm);
+  font-weight: 400;
+  line-height: 19.2px;
+  letter-spacing: 2.7px;
+  color: var(--clr-accent);
+  text-transform: uppercase;
+  padding: 35px 0 35px 0;
+}
+h4 span {
+  color: rgba(255, 255, 255, 0.5);
+}
+h5 {
+  font-family: "Bellefair";
+  font-size: var(--fs-h5-sm);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--clr-accent);
+  opacity: 0.5;
+  text-transform: uppercase;
+  padding: 8px 0 8px 0;
+}
+p {
+  font-family: "Barlow";
+  font-size: var(--fs-p-sm);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--clr-secondary);
+  padding: 8px 0 8px 0;
+  text-align: center;
+  max-width: var(--mw-450);
+}
+body {
+  background: url("../assets/technology/background-technology-mobile.jpg")
+    center/cover no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  padding: var(--padding-page-sm);
+}
