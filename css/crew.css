@@ -237,6 +237,7 @@ body {
     justify-content: center;
     padding-bottom: 0;
     align-items: flex-end;
+    position: relative;
   }
   .crew-body-left {
     width: 50%;
