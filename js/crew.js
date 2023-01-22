@@ -14,6 +14,7 @@ $(window).ready(() => {
   });
 
   // set active link for crewmembers
+  console.log(crewId);
   $(`#${crewId}`).children().addClass("crew-link-active");
   // active on click
   $(".crew-link").click((e) => {

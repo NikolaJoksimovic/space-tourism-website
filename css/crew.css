@@ -50,6 +50,7 @@ h4 {
 }
 h4 span {
   color: rgba(255, 255, 255, 0.5);
+  margin-right: 16px;
 }
 h5 {
   font-family: "Bellefair";
@@ -202,6 +203,9 @@ body {
   background-color: white !important;
 }
 @media screen and (min-width: 768px) {
+  body {
+    padding: 0 0 0 0;
+  }
   .mobile {
     display: none;
   }
@@ -224,6 +228,10 @@ body {
   }
 }
 @media screen and (min-width: 1440px) {
+  body {
+    padding: 40px 0 0 0;
+    margin-bottom: 24px;
+  }
   .crew-body-container {
     flex-direction: row;
     justify-content: center;
